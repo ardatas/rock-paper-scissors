@@ -1,7 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
-
-playGame(5);
+let printScore = ``;
 
 function checkIfValid(choice) {
     let choiceInsensitive = choice.toLowerCase();
@@ -67,11 +66,15 @@ function playRound(selection1, selection2) {
 
 function playGame(count) {
 
-    for(let i=0; i<count; i++) {
+    for (let i=0; i<count; i++) {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection)
         console.log(`Human: ${humanScore} Computer: ${computerScore}`);
+
+        printScore = `<p>You: ${humanScore}, Computer ${computerScore}</p>`;
+
+        document.getElementById('score').innerHTML = printScore;
     }
 }
 
