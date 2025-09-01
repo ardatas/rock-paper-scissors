@@ -14,9 +14,9 @@ function getHumanChoice() {
     let humanChoice;
     while (true) {
         humanChoice = prompt("Rock, Paper or Scissors: ");
-        if (checkIfValid(humanChoice) !== undefined) {
-            humanChoice = humanChoice.toLowerCase();
-            break;
+        let validChoice = checkIfValid(humanChoice);
+        if (validChoice !== undefined) {
+            return validChoice;
         } else {
             alert('Invalid input. Type again.')
         }
@@ -24,15 +24,15 @@ function getHumanChoice() {
 }
 
 function getComputerChoice() {
-    
-    let computerChoice;
+
     let randomInteger = Math.floor(Math.random()*3);
+
     if (randomInteger == 0) {
-        return computerChoice = 'rock';
+        return 'rock';
     } else if (randomInteger == 1) {
-        return computerChoice = 'paper';
+        return 'paper';
     } else {
-        return computerChoice = 'scissors';
+        return 'scissors';
     }
 }
 
