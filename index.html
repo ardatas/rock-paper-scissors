@@ -2,14 +2,49 @@
 <html lang="en">
     <head>
         <title>Rock Paper Scissors</title>
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
+        <style>
+            body {
+                padding: 10px 10px 20px 20px;
+            }
+            header {
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
+
+            .round-display {
+                padding: 40px;
+                margin-top: 10px; 
+                width: 300px; 
+                border: groove 5px #f4f4f4; 
+            }
+
+        </style>
+
     </head>
     <body>
-        <!-- No GUI on this basic project -->
-        <h1>Rock Paper Scissors</h1>
-        <button id="button" onclick="playGame(5)">Start Game</button>
-        <div id='score'>
-
-        </div>
+        <header>Rock Paper Scissors</header>
+        <main>
+            <button id="start-btn">Start Game</button>
+            <button id="end-btn">Reset Game</button>
+            <br></br>
+            <div class="btn-container">
+                <button class="btn" id="btn1">Rock</button>
+                <button class="btn" id="btn2">Paper</button>
+                <button class="btn" id="btn3">Scissors</button>
+            </div>
+            <section class="scoreboard">
+                <h3>Scoreboard</h3>
+                <div class="player-score">
+                    <span>You: </span>
+                    <span id="humanScore">0</span>
+                </div>
+                <div class="player-score">
+                    <span>Computer: </span>
+                    <span id="computerScore">0</span>
+                </div>
+            </section>
+            <div class='round-display'></div>
+        </main>
     </body>
 </html>
