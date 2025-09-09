@@ -105,7 +105,7 @@ startBtn.addEventListener('click', () => {
     console.log("Game started.")
 
     rockBtn.addEventListener('click', playGame)
-    paperBtn.addEventListener('click', playGame)
+    paperBtn.addEventListener('click', playGame)``
     scissorsBtn.addEventListener('click', playGame)  
     
 })
